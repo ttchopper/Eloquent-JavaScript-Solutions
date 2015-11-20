@@ -8,7 +8,7 @@ function reverseArray(array) {
 
 function reverseArrayInPlace(array) {
   var length = array.length - 1;
-  for (var i = 0; i < (length / 2); i++) {
+  for (var i = 0; i < length / 2; i++) {
     var last = array[i];
     array[i] = array[length - i];
     array[length - i] = last;
