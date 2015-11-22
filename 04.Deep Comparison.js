@@ -16,7 +16,7 @@ function deepEqual(value1, value2) {
       var result;
       for (var prop in value1) {
         if (prop in value2) {
-          result = deepEqual(value1[prep], value2[prep]);
+          result = deepEqual(value1[prop], value2[prop]);
           if (!result) {
             break;
           }
