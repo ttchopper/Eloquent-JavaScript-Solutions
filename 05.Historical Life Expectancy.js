@@ -1,9 +1,9 @@
-function getAgePerCentury() {
+function getAgePerCentury(array) {
   var obj = {};
-  ancestry.forEach(function(person) {
+  array.forEach(function(person) {
     var century = Math.ceil(person.died / 100);
     var newArr = [];
-    ancestry.forEach(function(person) {
+    array.forEach(function(person) {
       if (Math.ceil(person.died / 100) === century) {
         newArr.push(person.died - person.born);
       }
@@ -13,7 +13,7 @@ function getAgePerCentury() {
   return obj;
 }
 
-var byCentury = getAgePerCentury();
+var byCentury = getAgePerCentury(ancestry);
 
 for (var century in byCentury) {
   var string = century + ": " + average(byCentury[century]);
