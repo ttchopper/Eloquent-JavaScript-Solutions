@@ -1,10 +1,10 @@
 function logFive(sequence) {
-  while (sequence.state < 4) {
-    if (sequence.state === sequence.end) {
-      return;
+    while (sequence.state < 4) {
+        if (sequence.state === sequence.end) {
+            return;
+        }
+        console.log(sequence.next());
     }
-    console.log(sequence.next());
-  }
 }
 
 function ArraySeq(arr) {
@@ -13,8 +13,8 @@ function ArraySeq(arr) {
     this.end = this.arr.length - 1;
 }
 ArraySeq.prototype.next = function () {
-        this.state += 1;
-        return this.arr[this.state];
+    this.state += 1;
+    return this.arr[this.state];
 };
 
 function RangeSeq(from, to) {
@@ -24,8 +24,8 @@ function RangeSeq(from, to) {
 }
 
 RangeSeq.prototype.next = function () {
-  this.state += 1;
-  return this.from + this.state;
+    this.state += 1;
+    return this.from + this.state;
 };
 
 logFive(new ArraySeq([1, 2]));
