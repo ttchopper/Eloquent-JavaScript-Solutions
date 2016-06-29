@@ -79,7 +79,7 @@ function nth(list, number) {
   var element;
   if (list === null) {
     return undefined;
-  } else if (number === 0) {k
+  } else if (number === 0) {
     element = list.value;
     return element;
   } else {
